@@ -1,0 +1,122 @@
+public class fist{
+    public static void main (String[] args){
+        int a=10;
+        system.err.println(a);
+        system.out.println(a);
+    }
+}
+o/p:10(10 will be printed in red colour)
+   :10(will be printed in normal way)
+   
+   --------------------------------------------------
+   BYTE STREAM:data can be represented in individual form of bytes 
+   file input stream
+   fileoutput stream
+   buffered input stream
+   buffered output stream
+   
+   fileoutput stream:
+   the data that we are inserting is showm in  the file
+   import java.io.*;
+   public class CreateFile{
+       public static void main(String[] args) throws IOException{
+                 DataInputStream dis=new DataInputStream(System.in)        // this the stream where we are taking the input from soomewhere and sending somewhere  
+                 FileOutputStream fout=new FileOutputStream("path of the file")    
+                 sys .out.println('Enter the data(@ at the end):');
+                 char ch;
+                 while((ch=(char)dis.read())!='@'){
+                 fout.write(ch)
+                 }
+                 fout.close()
+   }
+     
+   o/p: this is the data insertng
+        into the file                 //even though we are pressing enter key taking input will not be stopped but when we press @ taking inout will be stopped 
+       
+   BUFFEREDOUTPUT STREAM:
+   -------------------------
+   import java.io.*;
+   public class CreateFile{
+       public static void main(String[] args)throws IOException
+        DataInputStream dis=new DataInputStream(System.in)       
+        FileOutputStream fout=new FileOutputStream("path of the file")           
+        bufferedOutputStream bout=new BufferedOutputStream(fout,1024)
+        sys .out.println('Enter the data(@ at the end):');
+        
+-----------------some code is missed here
+
+}
+  fileoutput stream and buffered output stream both are works in the same way but we should prefer because buffer has time complexity
+  
+  
+  READ A DATA FROM THE FILE:
+  ---------------------------
+  FILE READER GIVES THE FLEXIBILITY TO READ THE FILE:
+    
+    
+    INT CH;
+    FileReader fr=null;
+    try{
+        fr=new FileReader("Fle path will be copied")
+        system.out ptintln("File is checked");
+      }catch(FileNotFoundException fe)
+      {
+      --------code is missed here
+      }
+   
+   
+   
+   
+   SERIALIZATION
+   ---------------
+   process of storiong object contents into a file
+   
+   class student{
+   //insta
+        int rollno;
+        string name;
+        int age;
+   
+   
+   
+   
+   
+   
+   public class studentUse{
+       public static void main(string[] args)
+             //instant variables
+       Student s1=new Student();
+       s1.name='Heena';
+       s1.age=28;
+       s2.rollno=100;
+      
+      System.out.println("Stuent name is :"+s1.name);
+       System.out.println("Stuent age is :"+s1.age);
+       System.out.println("Stuent rollno is :"+s1.rollno);
+      
+      sysytem.out.println();
+       student s2=new student();
+       s2.name='urvasi';
+       s2.age=21;
+       s2.rollno=102;
+   
+       System.out.println("Stuent name is :"+s2.name);
+       System.out.println("Stuent age is :"+s2.age);
+       System.out.println("Stuent rollno is :"+s2.rollno);   
+   
+   }
+   
+   
+   explanation: here we are doing samething everytime which looks very messy where the constructor comes into a picture 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
